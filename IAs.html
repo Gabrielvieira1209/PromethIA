@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>PromethIA – IAs</title>
+
+   <!-- Bootstrap CSS -->
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
+   <link href="assets/css/all.css" rel="stylesheet">
+   <link href="assets/css/styles.css" rel="stylesheet">
+   <!-- Fonte Poppins -->
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+   <style>
+      body {
+         background-color: #152238; /* azul escuro, mas mais claro que o header */
+         color: #ffffff;
+         font-family: 'Poppins', sans-serif;
+         padding-top: 80px;
+      }
+
+      .navbar-custom {
+         background-color: #0d1b2a;
+      }
+
+      .navbar-custom .nav-link {
+         color: #84caff !important;
+         font-family: 'Poppins', sans-serif;
+         font-weight: 500;
+         font-size: 1rem;
+      }
+
+      .navbar-custom .nav-link:hover {
+         color: #ffffff !important;
+      }
+
+      .navbar-custom .navbar-brand img {
+         filter: brightness(0) invert(1);
+      }
+
+      .navbar-toggler {
+         border-color: #84caff;
+      }
+
+      .navbar-toggler-icon {
+         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2384caff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      h1, h2, h3, h4 {
+         color: #84caff;
+      }
+          .modal-content {
+        background-color: #1b2c42;
+        color: #ffffff;
+        }
+
+        .modal-header {
+            background-color: #0d1b2a;
+            color: #84caff;
+            border-bottom: 1px solid #84caff;
+        }
+
+        .form-control, .form-check-label, .form-check-input, .form-group label {
+            background-color: #e9f1fa;
+            color: #0d1b2a;
+        }
+
+        .form-control {
+            background-color: #243b5e;
+            color: #fff;
+            border: 1px solid #1a2b47;
+        }
+
+        .form-control:focus {
+            background-color: #1a2b47; 
+            border-color: #007bff; 
+            box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.5);
+        }
+
+        .form-check-input {
+            background-color: #243b5e;
+            border-color: #1a2b47; 
+        }
+
+        .form-check-input:checked {
+            background-color: #007bff; 
+            border-color: #007bff;
+        }
+
+        .invalid-feedback {
+            color: #ff4d4d; 
+        }
+
+        .btn-primary {
+            background-color: #007bff; 
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; 
+            border-color: #0056b3;
+        }
+
+   </style>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-md fixed-top navbar-custom">
+      <div class="container">
+         <a class="navbar-brand" href="index.html">
+            <img src="assets/images/PromethIAlogo.png" style="width: 90px;" alt="PromethIA Logo">
+         </a>
+
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+            aria-expanded="false" aria-label="Botão de navegação">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="menu">
+            <div class="navbar-nav mr-auto">
+               <a class="nav-item nav-link" href="IAs.html">IAs</a>
+               <a class="nav-item nav-link" href="newsletter.html">Newsletter</a>
+               <div class="dropdown">
+                  <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="guias.html">
+                     Guias
+                  </a>
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="guias.html#tutoriais">Tutoriais</a>
+                     <a class="dropdown-item" href="guias.html#casos">Casos de Uso</a>
+                     <a class="dropdown-item" href="guias.html#avancado">Uso Avançado</a>
+                     <a class="dropdown-item" href="guias.html#livros">Livros</a>
+                  </div>
+               </div>
+               <a class="nav-item nav-link" href="loja.html">Loja</a>
+               <a class="nav-item nav-link" href="contato.html">Contato</a>
+            </div>
+
+            <div class="navbar-nav">
+               <a class="nav-item nav-link" href="#reservamodal" data-toggle="modal">
+                  <i class="fas fa-sign-in-alt"></i> Entrar
+               </a>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+<!--
+Box para informacoes pessoais do login
+-->
+   <div class="modal fade" id="reservamodal">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <span class="modal-title">Faca Login e fique por dentro do nosso site</span>
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <form action="">
+                  <fieldset class="form-group">
+                     <legend class="font-weight-bold">Informações Pessoais</legend>
+
+                     <div class="form-group row">
+                        <label for="nome" class="col-form-label col-lg-2">Nome</label>
+                        <div class="col-lg-10">
+                           <input type="text" name="nome" class="form-control is-valid" placeholder="Nome" id="nome">
+                        </div>
+                     </div>
+
+                     <div class="form-group row">
+                        <label for="senha" class="col-form-label col-lg-2">Senha</label>
+                        <div class="col-lg-10">
+                           <input type="password" id="senha" name="senha" class="form-control is-invalid" placeholder="Senha">
+                           <div class="invalid-feedback">
+                              Este campo deve ser informado.
+                           </div>
+                        </div>
+                     </div>
+                  </fieldset>
+
+                  <div class="form-group row">
+                     <div class="col-lg-10 offset-lg-2">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">
+                           Enviar
+                        </button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--  
+ cards com ias  
+   -->
+
+   <div class="container">
+      <div class="jumbotron d-block d-md-none text-center mb-4" style="margin-top: 90px;">
+      
+    </div>
+      <div class="row mb-4">
+         <div class="col-lg-4 col-md-6">
+            <div class="card mb-3" style="background-color: #d0e7ff; color: #003366;">
+                <img src="assets/images/ChatGPTlogo.png" alt="ChatGPT" class="card-img-top" style="height: 200px; object-fit: cover;">
+               <div class="card-body">
+                  <div class="text-center">
+                     <h5 class="card-title" style="color: #001933;">ChatGPT</h5>
+                     <p class="text-warning font-weight-bold">OpenAI</p>
+                  </div>
+                  <p class="card-text text-justify">
+                        Desenvolvido pela OpenAI, é um modelo de linguagem avançado usado para responder perguntas, escrever textos,
+                     programar e realizar tarefas gerais com base em linguagem natural. Disponível em versões como GPT-3.5 e GPT-4.</p>
+               </div>
+               <div class="card-footer text-right" style="background-color: #d0e7ff; border-top: none;">
+                  <button class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card mb-3" style="background-color: #d0e7ff; color: #003366;">
+                <img src="assets/images/Deepseeklogo.jpg" alt="DeepSeek" class="card-img-top" style="height: 200px; object-fit: cover;">
+               <div class="card-body">
+                  <div class="text-center">
+                     <h5 class="card-title" style="color: #001933;">DeepSeek</h5>
+                     <p class="text-warning font-weight-bold">DeepSeek</p>
+                  </div>
+                  <p class="card-text text-justify">
+                        IA de código aberto criada na China, focada em raciocínio matemático, 
+                        análise de dados e geração de conteúdo técnico com forte desempenho em benchmarks científicos.</p>
+               </div>
+               <div class="card-footer text-right" style="background-color: #d0e7ff; border-top: none;">
+                  <button class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card mb-3" style="background-color: #d0e7ff; color: #003366;">
+                <img src="assets/images/geminilogo.jpg" alt="Gemini" class="card-img-top" style="height: 200px; object-fit: cover;">
+               <div class="card-body">
+                  <div class="text-center">
+                     <h5 class="card-title" style="color: #001933;">Gemini</h5>
+                     <p class="text-warning font-weight-bold">Google</p>
+                  </div>
+                  <p class="card-text text-justify">
+                         Desenvolvido pelo Google, integra IA generativa ao ecossistema Google (Docs, Search, etc.), 
+                         com foco em multimodalidade (texto, imagem, voz) e conectividade com a web.</p>
+               </div>
+               <div class="card-footer text-right" style="background-color: #d0e7ff; border-top: none;">
+                  <button class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card mb-3" style="background-color: #d0e7ff; color: #003366;">
+                <img src="assets/images/midjourney.jpg" alt="midjourney" class="card-img-top" style="height: 200px; object-fit: cover;">
+               <div class="card-body">
+                  <div class="text-center">
+                     <h5 class="card-title" style="color: #001933;">Midjourney</h5>
+                     <p class="text-warning font-weight-bold">Midjourney</p>
+                  </div>
+                  <p class="card-text text-justify">
+                         IA de geração de imagens artísticas via prompts textuais, 
+                         muito usada por designers e criadores visuais por seu estilo estético e detalhamento refinado.</p>
+               </div>
+               <div class="card-footer text-right" style="background-color: #d0e7ff; border-top: none;">
+                  <button class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card mb-3" style="background-color: #d0e7ff; color: #003366;">
+                <img src="assets/images/claudeAI.png" alt="claudeAI" class="card-img-top" style="height: 200px; object-fit: cover;">
+               <div class="card-body">
+                  <div class="text-center">
+                     <h5 class="card-title" style="color: #001933;">claudeAI</h5>
+                     <p class="text-warning font-weight-bold">Anthropic</p>
+                  </div>
+                  <p class="card-text text-justify">
+                        Criada pela Anthropic, destaca-se por compreender grandes volumes de texto, 
+                        respostas seguras e éticas, com forte foco em alinhamento e uso corporativo.</p>
+               </div>
+               <div class="card-footer text-right" style="background-color: #d0e7ff; border-top: none;">
+                  <button class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card mb-3" style="background-color: #d0e7ff; color: #003366;">
+                <img src="assets/images/LLama.jfif" alt="LLaMA" class="card-img-top" style="height: 200px; object-fit: cover;">
+               <div class="card-body">
+                  <div class="text-center">
+                     <h5 class="card-title" style="color: #001933;">LLaMA</h5>
+                     <p class="text-warning font-weight-bold">Meta</p>
+                  </div>
+                  <p class="card-text text-justify">
+                         Modelos da Meta (Facebook) que são open-source e usados amplamente em pesquisa,
+                          oferecendo versões leves e eficientes para aplicações diversas em IA generativa.</p>
+               </div>
+               <div class="card-footer text-right" style="background-color: #d0e7ff; border-top: none;">
+                  <button class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card mb-3" style="background-color: #d0e7ff; color: #003366;">
+                <img src="assets/images/galaxyAI.jpg" alt="GalaxyAI" class="card-img-top" style="height: 200px; object-fit: cover;">
+               <div class="card-body">
+                  <div class="text-center">
+                     <h5 class="card-title" style="color: #001933;">GalaxyAI</h5>
+                     <p class="text-warning font-weight-bold">Samsung</p>
+                  </div>
+                  <p class="card-text text-justify">
+                        Conjunto de funcionalidades baseadas em IA presentes em dispositivos Samsung Galaxy
+                         (ex: tradução em tempo real, resumo de notas, edição de imagem inteligente).</p>
+               </div>
+               <div class="card-footer text-right" style="background-color: #d0e7ff; border-top: none;">
+                  <button class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+                   <div class="col-lg-4 col-md-6">
+            <div class="card mb-3" style="background-color: #d0e7ff; color: #003366;">
+                <img src="assets/images/Copilot.jfif" alt="Copilot" class="card-img-top" style="height: 200px; object-fit: cover;">
+               <div class="card-body">
+                  <div class="text-center">
+                     <h5 class="card-title" style="color: #001933;">Copilot</h5>
+                     <p class="text-warning font-weight-bold">Microsoft</p>
+                  </div>
+                  <p class="card-text text-justify">
+                        Assistente de produtividade da Microsoft, integrado ao Word, Excel, Teams e mais, 
+                        usando GPT-4 para automatizar tarefas, gerar textos, insights e análises.</p>
+               </div>
+               <div class="card-footer text-right" style="background-color: #d0e7ff; border-top: none;">
+                  <button class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+
+   </div>
+
+   
+   <script src="assets/js/jquery-3.3.1.js"></script>
+   <script src="assets/js/popper.js"></script>
+   <script src="assets/js/bootstrap.js"></script>
+   <script src="assets/js/script.js"></script>
+</body>
+</html>

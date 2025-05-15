@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>PromethIA – IAs</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/all.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <!-- Fonte Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #152238; /* azul escuro, mas mais claro que o header */
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        padding-top: 80px;
+      }
+
+      .navbar-custom {
+        background-color: #0d1b2a;
+      }
+
+      .navbar-custom .nav-link {
+        color: #84caff !important;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      .navbar-custom .nav-link:hover {
+        color: #ffffff !important;
+      }
+
+      .navbar-custom .navbar-brand img {
+        filter: brightness(0) invert(1);
+      }
+
+      .navbar-toggler {
+        border-color: #84caff;
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2384caff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #84caff;
+      }
+        .custom-input,
+    .custom-select {
+    background-color: #1b2d45;
+    color: #ffffff;
+    border: 1px solid #84caff;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .custom-input::placeholder {
+    color: #84caff;
+    opacity: 0.7;
+    }
+
+    .custom-input:focus,
+    .custom-select:focus {
+    background-color: #1b2d45;
+    border-color: #84caff;
+    box-shadow: 0 0 0 0.2rem rgba(132, 202, 255, 0.25);
+    color: #ffffff;
+        }
+        .pagination .page-link {
+    background-color: #1b2d45;
+    border: 1px solid #84caff;
+    color: #84caff;
+    }
+
+    .pagination .page-link:hover {
+    background-color: #84caff;
+    color: #0d1b2a;
+    }
+
+    .pagination .page-item.active .page-link {
+    background-color: #84caff !important;
+    color: #0d1b2a !important;
+    border: 1px solid #84caff !important;
+    }
+
+    .pagination .page-item.disabled .page-link {
+    background-color: #1b2d45;
+    color: #6c757d;
+    border: 1px solid #84caff;
+    }
+    .modal-content {
+        background-color: #1b2c42;
+        color: #ffffff;
+    }
+
+    .modal-header {
+        background-color: #0d1b2a;
+        color: #84caff;
+        border-bottom: 1px solid #84caff;
+    }
+
+    .form-control, .form-check-label, .form-check-input, .form-group label {
+        background-color: #e9f1fa;
+        color: #0d1b2a;
+    }
+
+    .form-control {
+        background-color: #243b5e;
+        color: #fff;
+        border: 1px solid #1a2b47;
+    }
+
+    .form-control:focus {
+        background-color: #1a2b47; 
+        border-color: #007bff; 
+        box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.5);
+    }
+
+    .form-check-input {
+        background-color: #243b5e;
+        border-color: #1a2b47; 
+    }
+
+    .form-check-input:checked {
+        background-color: #007bff; 
+        border-color: #007bff;
+    }
+
+    .invalid-feedback {
+        color: #ff4d4d; 
+    }
+
+    .btn-primary {
+        background-color: #007bff; 
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3; 
+        border-color: #0056b3;
+    }
+
+    </style>
+  </head><body>
+   <nav class="navbar navbar-expand-md fixed-top navbar-custom">
+      <div class="container">
+         <a class="navbar-brand" href="index.html">
+            <img src="assets/images/PromethIAlogo.png" style="width: 90px;" alt="PromethIA Logo">
+         </a>
+
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+            aria-expanded="false" aria-label="Botão de navegação">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="menu">
+            <div class="navbar-nav mr-auto">
+               <a class="nav-item nav-link" href="IAs.html">IAs</a>
+               <a class="nav-item nav-link" href="newsletter.html">Newsletter</a>
+               <div class="dropdown">
+                  <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="guias.html">
+                     Guias
+                  </a>
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="guias.html#tutoriais">Tutoriais</a>
+                     <a class="dropdown-item" href="guias.html#casos">Casos de Uso</a>
+                     <a class="dropdown-item" href="guias.html#avancado">Uso Avançado</a>
+                     <a class="dropdown-item" href="guias.html#livros">Livros</a>
+                  </div>
+               </div>
+               <a class="nav-item nav-link" href="loja.html">Loja</a>
+               <a class="nav-item nav-link" href="contato.html">Contato</a>
+            </div>
+
+            <div class="navbar-nav">
+               <a class="nav-item nav-link" href="#reservamodal" data-toggle="modal">
+                  <i class="fas fa-sign-in-alt"></i> Entrar
+               </a>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <div class="container my-5">
+  <h1 class="text-center mb-5">Explore nossa Loja com produtos de Inteligência Artificial</h1>
+
+<!--
+Box para informacoes pessoais do login
+-->
+   <div class="modal fade" id="reservamodal">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <span class="modal-title">Faca Login e fique por dentro do nosso site</span>
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <form action="">
+                  <fieldset class="form-group">
+                     <legend class="font-weight-bold">Informações Pessoais</legend>
+
+                     <div class="form-group row">
+                        <label for="nome" class="col-form-label col-lg-2">Nome</label>
+                        <div class="col-lg-10">
+                           <input type="text" name="nome" class="form-control is-valid" placeholder="Nome" id="nome">
+                        </div>
+                     </div>
+
+                     <div class="form-group row">
+                        <label for="senha" class="col-form-label col-lg-2">Senha</label>
+                        <div class="col-lg-10">
+                           <input type="password" id="senha" name="senha" class="form-control is-invalid" placeholder="Senha">
+                           <div class="invalid-feedback">
+                              Este campo deve ser informado.
+                           </div>
+                        </div>
+                     </div>
+                  </fieldset>
+
+                  <div class="form-group row">
+                     <div class="col-lg-10 offset-lg-2">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">
+                           Enviar
+                        </button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+<!-- 
+Barra de busca e filtros 
+-->
+<div class="row mb-4">
+  <div class="col-md-4 mb-2">
+    <input type="text" class="form-control custom-input" placeholder="Buscar item">
+  </div>
+  <div class="col-md-4 mb-2">
+    <select class="form-control custom-select">
+      <option>Categoria</option>
+      <option>Roupas</option>
+      <option>Leitura</option>
+      <option>Produtividade</option>
+    </select>
+  </div>
+  <div class="col-md-4 mb-2">
+    <select class="form-control custom-select">
+      <option>Ordenar por</option>
+      <option>Mais populares</option>
+      <option>Mais recentes</option>
+      <option>Menor preço</option>
+    </select>
+  </div>
+</div>
+<!-- 
+Container dos Produtos da loja
+-->
+<div class="container">
+  <!-- 
+    Pag 1 
+   -->
+  <div class="row" id="pagina1Cards">
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100" style="background-color: #1b2d45; border: none; color: #ffffff;">
+        <img src="assets/images/livro1.jpg" class="card-img-top" alt="IA 1" style="object-fit: cover; height: 500px;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #84caff;">Inteligência artificial</h5>
+          <p class="card-text">Como os robôs estão mudando o mundo, a forma como amamos, nos relacionamos, trabalhamos e vivemos.</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: transparent; border-top: 1px solid #84caff;">
+          <span style="color: #84caff;">R$ 29,90</span>
+          <button class="btn btn-sm" style="background-color: transparent; color: #84caff; border: 1px solid #84caff;" 
+                  onmouseover="this.style.backgroundColor='#84caff'; this.style.color='#0d1b2a';" 
+                  onmouseout="this.style.backgroundColor='transparent'; this.style.color='#84caff';">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100" style="background-color: #1b2d45; border: none; color: #ffffff;">
+        <img src="assets/images/livro2.jpg" class="card-img-top" alt="IA 2" style="object-fit: cover; height: 500px;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #84caff;">A era da ia: e Nosso Futuro Como Humanos</h5>
+          <p class="card-text">“Os três autores de A Era da IA têm alegações fortes que fazem com que sejam levados a sério… Eles analisam nosso passado tecnológico para explicar o provável impacto da IA no futuro.”― Financial Times.</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: transparent; border-top: 1px solid #84caff;">
+          <span style="color: #84caff;">R$ 49,90</span>
+          <button class="btn btn-sm" style="background-color: transparent; color: #84caff; border: 1px solid #84caff;" 
+                  onmouseover="this.style.backgroundColor='#84caff'; this.style.color='#0d1b2a';" 
+                  onmouseout="this.style.backgroundColor='transparent'; this.style.color='#84caff';">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100" style="background-color: #1b2d45; border: none; color: #ffffff;">
+        <img src="assets/images/Deepseekcamisa.png" class="card-img-top" alt="IA 3" style="object-fit: cover; height: 500px;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #84caff;">Camiseta DeepSeek</h5>
+          <p class="card-text">Camiseta confortavel em algodao para demonstrar seu amor ao DeepSeek</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: transparent; border-top: 1px solid #84caff;">
+          <span style="color: #84caff;">R$ 39,90</span>
+          <button class="btn btn-sm" style="background-color: transparent; color: #84caff; border: 1px solid #84caff;" 
+                  onmouseover="this.style.backgroundColor='#84caff'; this.style.color='#0d1b2a';" 
+                  onmouseout="this.style.backgroundColor='transparent'; this.style.color='#84caff';">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+   Pag 2 
+   -->
+  <div class="row" id="pagina2Cards" style="display: none;">
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100" style="background-color: #1b2d45; border: none; color: #ffffff;">
+        <img src="assets/images/chatgptcasaco.png" class="card-img-top" alt="IA 4" style="object-fit: cover; height: 500px;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #84caff;">Moletom ChatGPT</h5>
+          <p class="card-text">Moletom estiloso e confortavel com a marca estampada no peito</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: transparent; border-top: 1px solid #84caff;">
+          <span style="color: #84caff;">R$ 159,90</span>
+          <button class="btn btn-sm" style="background-color: transparent; color: #84caff; border: 1px solid #84caff;" 
+                  onmouseover="this.style.backgroundColor='#84caff'; this.style.color='#0d1b2a';" 
+                  onmouseout="this.style.backgroundColor='transparent'; this.style.color='#84caff';">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100" style="background-color: #1b2d45; border: none; color: #ffffff;">
+        <img src="assets/images/chaveiro.jpg" class="card-img-top" alt="IA 5" style="object-fit: cover; height: 500px;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #84caff;">Chaveiro Many faces </h5>
+          <p class="card-text">Chaveiro many faces IA</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: transparent; border-top: 1px solid #84caff;">
+          <span style="color: #84caff;">R$ 9,90</span>
+          <button class="btn btn-sm" style="background-color: transparent; color: #84caff; border: 1px solid #84caff;" 
+                  onmouseover="this.style.backgroundColor='#84caff'; this.style.color='#0d1b2a';" 
+                  onmouseout="this.style.backgroundColor='transparent'; this.style.color='#84caff';">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100" style="background-color: #1b2d45; border: none; color: #ffffff;">
+        <img src="assets/images/livro3.jpg" class="card-img-top" alt="IA 6" style="object-fit: cover; height: 500px;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #84caff;">Inteligência Artificial - Uma Abordagem Moderna</h5>
+          <p class="card-text">Inteligência Artificial chega à quarta edição como o livro mais importante para profissionais e estudantes da área, confirmando sua liderança e referência em todo o mundo.</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: transparent; border-top: 1px solid #84caff;">
+          <span style="color: #84caff;">R$ 19,90</span>
+          <button class="btn btn-sm" style="background-color: transparent; color: #84caff; border: 1px solid #84caff;" 
+                  onmouseover="this.style.backgroundColor='#84caff'; this.style.color='#0d1b2a';" 
+                  onmouseout="this.style.backgroundColor='transparent'; this.style.color='#84caff';">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+Paginas
+ -->
+<nav aria-label="Navegação da loja" class="mt-4">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled" id="paginaAnterior">
+      <a class="page-link" href="#" onclick="mostrarPagina(1)" 
+         style="background-color: #1b2d45; border: 1px solid #84caff; color: #84caff;">
+         Anterior
+      </a>
+    </li>
+    <li class="page-item active" id="pagina1">
+      <a class="page-link" href="#" onclick="mostrarPagina(1)" 
+         style="background-color: #84caff; border: 1px solid #84caff; color: #0d1b2a;">
+         1
+      </a>
+    </li>
+    <li class="page-item" id="pagina2">
+      <a class="page-link" href="#" onclick="mostrarPagina(2)" 
+         style="background-color: #1b2d45; border: 1px solid #84caff; color: #84caff;">
+         2
+      </a>
+    </li>
+    <li class="page-item" id="paginaProxima">
+      <a class="page-link" href="#" onclick="mostrarPagina(2)" 
+         style="background-color: #1b2d45; border: 1px solid #84caff; color: #84caff;">
+         Próxima
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+<!-- 
+Script da pag
+-->
+<script>
+  function mostrarPagina(pagina) {
+    const pagina1 = document.getElementById('pagina1Cards');
+    const pagina2 = document.getElementById('pagina2Cards');
+    const item1 = document.getElementById('pagina1');
+    const item2 = document.getElementById('pagina2');
+    const anterior = document.getElementById('paginaAnterior');
+    const proxima = document.getElementById('paginaProxima');
+
+    if (pagina === 1) {
+      pagina1.style.display = 'flex';
+      pagina2.style.display = 'none';
+      item1.classList.add('active');
+      item2.classList.remove('active');
+      anterior.classList.add('disabled');
+      proxima.classList.remove('disabled');
+    } else {
+      pagina1.style.display = 'none';
+      pagina2.style.display = 'flex';
+      item1.classList.remove('active');
+      item2.classList.add('active');
+      anterior.classList.remove('disabled');
+      proxima.classList.add('disabled');
+    }
+  }
+</script>
+
+
+
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

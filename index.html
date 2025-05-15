@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
+   <link href="assets/css/all.css" rel="stylesheet">
+   <link href="assets/css/styles.css" rel="stylesheet">
+   <title>Bootstrap</title>
+</head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>PromethIA</title>
+
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+   <style>
+      .navbar-custom {
+         background-color: #0d1b2a;
+      }
+
+      .navbar-custom .nav-link {
+         color: #84caff !important;
+         font-family: 'Poppins', sans-serif;
+         font-weight: 500;
+         font-size: 1rem;
+      }
+
+      .navbar-custom .nav-link:hover {
+         color: #ffffff !important;
+      }
+
+      .navbar-custom .navbar-brand img {
+         filter: brightness(0) invert(1);
+      }
+
+      .navbar-toggler {
+         border-color: #84caff;
+      }
+
+      .navbar-toggler-icon {
+         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2384caff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      body {
+         background-color: #0d1b2a;
+         color: #84caff;
+         font-family: 'Poppins', sans-serif;
+      }
+
+      .jumbotron {
+         background-color: #13293d;
+         color: #ffffff;
+         border-radius: 1rem;
+      }
+
+      .jumbotron h4 {
+         color: #84caff;
+      }
+
+      .btn-primary {
+         background-color: #84caff;
+         border-color: #84caff;
+         color: #0d1b2a;
+      }
+
+      .btn-primary:hover {
+         background-color: #5aabdc;
+         border-color: #5aabdc;
+      }
+
+      .blockquote-footer {
+         color: #84caff;
+      }
+
+      .modal-content {
+         background-color: #1b2c42;
+         color: #ffffff;
+      }
+
+      .modal-header {
+         background-color: #0d1b2a;
+         color: #84caff;
+         border-bottom: 1px solid #84caff;
+      }
+
+      .form-control, .form-check-label, .form-check-input, .form-group label {
+         background-color: #e9f1fa;
+         color: #0d1b2a;
+      }
+
+      .carousel-caption {
+         background-color: rgba(0, 0, 0, 0.5);
+         border-radius: 10px;
+         padding: 10px;
+      }
+
+      .footer {
+         background-color: #0d1b2a;
+         color: #84caff;
+         padding: 30px 0;
+      }
+
+      .footer a {
+         color: #84caff;
+         text-decoration: none;
+      }
+
+      .footer a:hover {
+         color: #ffffff;
+      }
+
+      .dropdown-menu {
+         background-color: #13293d;
+      }
+
+      .dropdown-item {
+         color: #84caff;
+      }
+
+      .dropdown-item:hover {
+         background-color: #0d1b2a;
+         color: #ffffff;
+      }
+
+      .carousel-indicators li {
+         background-color: #84caff;
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+         filter: invert(1);
+      }
+
+      .form-control {
+         background-color: #243b5e;
+         color: #fff;
+         border: 1px solid #1a2b47;
+      }
+
+      .form-control:focus {
+         background-color: #1a2b47; 
+         border-color: #007bff; 
+         box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.5);
+      }
+
+      .form-check-input {
+         background-color: #243b5e;
+         border-color: #1a2b47; 
+      }
+
+      .form-check-input:checked {
+         background-color: #007bff; 
+         border-color: #007bff;
+      }
+
+      .invalid-feedback {
+         color: #ff4d4d; 
+      }
+
+      .btn-primary {
+         background-color: #007bff; 
+         border-color: #007bff;
+      }
+
+      .btn-primary:hover {
+         background-color: #0056b3; 
+         border-color: #0056b3;
+      }
+      .banner {
+      margin-top: 80px;
+      width: 100vw;
+      height: calc(100vh - 80px);
+      background-color:   #060A13; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      }
+
+      .banner img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      }
+
+  </style>
+
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-md fixed-top navbar-custom">
+      <div class="container">
+         <a class="navbar-brand" href="index.html">
+            <img src="assets/images/PromethIAlogo.png" style="width: 90px;" alt="PromethIA Logo">
+         </a>
+
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+            aria-expanded="false" aria-label="Botão de navegação">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="menu">
+            <div class="navbar-nav mr-auto">
+               <a class="nav-item nav-link" href="IAs.html">IAs</a>
+               <a class="nav-item nav-link" href="newsletter.html">Newsletter</a>
+               <div class="dropdown">
+                  <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="guias.html">
+                     Guias
+                  </a>
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="guias.html#tutoriais">Tutoriais</a>
+                     <a class="dropdown-item" href="guias.html#casos">Casos de Uso</a>
+                     <a class="dropdown-item" href="guias.html#avancado">Uso Avançado</a>
+                     <a class="dropdown-item" href="guias.html#livros">Livros</a>
+                  </div>
+               </div>
+               <a class="nav-item nav-link" href="loja.html">Loja</a>
+               <a class="nav-item nav-link" href="contato.html">Contato</a>
+            </div>
+
+            <div class="navbar-nav">
+               <a class="nav-item nav-link" href="#reservamodal" data-toggle="modal">
+                  <i class="fas fa-sign-in-alt"></i> Entrar
+               </a>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+
+<!--
+Box para informacoes pessoais do login
+-->
+   <div class="modal fade" id="reservamodal">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <span class="modal-title">Reserva de Passeios e Excursões</span>
+               <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <form action="">
+                  <fieldset class="form-group">
+                     <legend class="font-weight-bold">Informações Pessoais</legend>
+
+                     <div class="form-group row">
+                        <label for="nome" class="col-form-label col-lg-2">Nome</label>
+                        <div class="col-lg-10">
+                           <input type="text" name="nome" class="form-control is-valid" placeholder="Nome" id="nome">
+                        </div>
+                     </div>
+
+                     <div class="form-group row">
+                        <label for="senha" class="col-form-label col-lg-2">Senha</label>
+                        <div class="col-lg-10">
+                           <input type="password" id="senha" name="senha" class="form-control is-invalid" placeholder="Senha">
+                           <div class="invalid-feedback">
+                              Este campo deve ser informado.
+                           </div>
+                        </div>
+                     </div>
+                  </fieldset>
+
+                  <div class="form-group row">
+                     <div class="col-lg-10 offset-lg-2">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">
+                           Enviar
+                        </button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+<!--
+   banner
+   -->
+   <div class="banner">
+   <img src="assets/images/PromethIAbanner.png" alt="Banner PromethIA">
+   </div>
+
+
+<!--
+Titulo grande(manda para pagina com as ias destaque)
+-->
+   <section class="jumbotron text-center" style="background-color: #0d1b2a; color: #84caff;">
+   <div class="container">
+      <h1 class="display-4">Descubra o Futuro com a PromethIA</h1>
+      <p class="lead">Tudo sobre Inteligência Artificial em um só lugar: ferramentas, guias, novidades e muito mais.</p>
+      <a href="IAs.html" class="btn btn-outline-light">Explorar IAs</a>
+   </div>
+   </section>
+
+<!--
+caixas de texto 
+-->    
+   <section class="py-5 text-light" style="background-color: #081420;">
+   <div class="container text-center">
+      <h2 class="mb-4">Impacto da Inteligência Artificial</h2>
+      <div class="row">
+         <div class="col-md-4 mb-4">
+         <h1 class="display-4 fw-bold">65%</h1>
+         <p>das empresas já usam IA de alguma forma</p>
+         </div>
+         <div class="col-md-4 mb-4">
+         <h1 class="display-4 fw-bold">3M+</h1>
+         <p>empregos impactados até 2025</p>
+         </div>
+         <div class="col-md-4 mb-4">
+         <h1 class="display-4 fw-bold">120+</h1>
+         <p>ferramentas de IA catalogadas</p>
+         </div>
+      </div>
+   </div>
+   </section>
+
+<!--
+footer
+-->
+   <footer class="py-4 text-light" style="background-color: #0d1b2a;">
+   <div class="container text-center">
+      <p class="mb-1">&copy; 2025 Inteligências Artificiais. Apresentação educativa.</p>
+      <p class="mb-0 small">
+         Desenvolvido por Gabriel Vieira | 
+         <a href="contato.html" class="text-decoration-none text-light">Contatos</a>
+      </p>
+   </div>
+   </footer>
+
+
+   <script src="assets/js/jquery-3.3.1.js"></script>
+   <script src="assets/js/popper.js"></script>
+   <script src="assets/js/bootstrap.js"></script>
+   <script src="assets/js/script.js"></script>
+</body>
+
+</html>
